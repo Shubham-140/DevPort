@@ -1,6 +1,31 @@
-import "../css/Contact.css"; // Ensure to create a corresponding Contact.css file for styling
+import { useState } from "react";
+import "../css/Contact.css";
 
 const Contact = () => {
+  const [messageSent, setMessageSent] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setMessageSent(true);
+    setFormData({ name: "", email: "", message: "" }); // Clear all fields
+    setTimeout(() => {
+      setMessageSent(false);
+    }, 1000);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
   return (
     <div className="contact-container">
       {/* Hero Section for Contact */}
@@ -15,12 +40,12 @@ const Contact = () => {
       {/* Contact Information Section */}
       <section className="contact-info">
         <h2>Reach Out</h2>
+        Email:{" "}
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ss98736538@gmail.com">
+          ss98736538@gmail.com
+        </a>
         <p>
-          Email:{" "}
-          <a href="mailto:shubhamsingh@example.com">shubhamsingh@example.com</a>
-        </p>
-        <p>
-          Phone: <a href="tel:+911234567890">+91-1234567890</a>
+          Phone: <a href="tel:+911234567890">+91-9560547103</a>
         </p>
         <p>Or, fill out the form below to send a message directly!</p>
       </section>
@@ -34,6 +59,8 @@ const Contact = () => {
             type="text"
             id="name"
             name="name"
+            value={formData.name}
+            onChange={handleChange}
             placeholder="Enter your full name"
             required
           />
@@ -43,6 +70,8 @@ const Contact = () => {
             type="email"
             id="email"
             name="email"
+            value={formData.email}
+            onChange={handleChange}
             placeholder="Enter your email address"
             required
           />
@@ -51,13 +80,19 @@ const Contact = () => {
           <textarea
             id="message"
             name="message"
+            value={formData.message}
+            onChange={handleChange}
             placeholder="Type your message here"
             rows="6"
             required
           ></textarea>
 
-          <button type="submit" className="submit-btn">
-            Send Message
+          <button
+            type="submit"
+            className="submit-btn"
+            onClick={handleSubmit}
+          >
+            {messageSent ? "Message Sent ✔" : "Send Message"}
           </button>
         </form>
       </section>
