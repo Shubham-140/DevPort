@@ -1,4 +1,4 @@
-/* Projects.css - Simplified Version (No Images) */
+/* Projects.css - Enhanced Version */
 
 /* Base Styles */
 .projects-container {
@@ -10,7 +10,7 @@
   padding: 0 20px;
 }
 
-/* Hero Section - Matching About/Contact */
+/* Hero Section */
 .projects-hero {
   background: linear-gradient(135deg, #6e8efb, #a777e3);
   color: white;
@@ -36,11 +36,11 @@
   opacity: 0.9;
 }
 
-/* Project List Section - Simplified */
+/* Project List Section */
 .project-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
   padding: 3rem 0;
 }
 
@@ -55,7 +55,7 @@
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .project-info {
@@ -65,20 +65,73 @@
 .project-info h2 {
   font-size: 1.8rem;
   color: #2c3e50;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.project-info p {
+.project-info h2 span {
+  font-size: 1rem;
+  color: #a777e3;
+  font-weight: 600;
+}
+
+.project-desc {
   font-size: 1.1rem;
   color: #555;
   margin-bottom: 1.8rem;
   line-height: 1.7;
 }
 
+.highlight {
+  display: block;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 1rem 0 0.5rem;
+}
+
+.feature-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.feature-list li {
+  padding: 0.3rem 0;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.feature-list li:before {
+  content: "•";
+  color: #6e8efb;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  position: absolute;
+  left: 0;
+}
+
+.tech-stack {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.tech-label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
 .project-links {
   display: flex;
   gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 .project-link {
@@ -99,16 +152,6 @@
   box-shadow: 0 6px 15px rgba(110, 142, 251, 0.4);
 }
 
-/* Footer Section - Matching About/Contact */
-.footer {
-  text-align: center;
-  padding: 2rem 0;
-  color: #777;
-  font-size: 0.9rem;
-  border-top: 1px solid #eee;
-  margin-top: 3rem;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .projects-hero {
@@ -125,10 +168,6 @@
   
   .project-card {
     padding: 2rem;
-  }
-  
-  .project-info {
-    text-align: center;
   }
   
   .project-links {
@@ -148,6 +187,19 @@
   
   .project-list {
     padding: 2rem 0;
+    gap: 2rem;
+  }
+  
+  .project-card {
+    padding: 1.5rem;
+  }
+  
+  .project-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .project-desc {
+    font-size: 1rem;
   }
   
   .project-link {
