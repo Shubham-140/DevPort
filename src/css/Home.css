@@ -1,0 +1,88 @@
+/* Home.css - Consistent with About/Contact */
+
+/* Base Styles */
+.home-container {
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section - Now perfectly matches About/Contact */
+.hero {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.05em;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Footer Section - Exact match with other components */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: #777;
+  font-size: 0.9rem;
+  border-top: 1px solid #eee;
+  margin-top: 3rem;
+}
+
+.social-links a {
+  color: #6e8efb;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #a777e3;
+}
+
+/* Responsive Design - Same breakpoints as About/Contact */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .social-links a {
+    display: block;
+    margin: 10px 0;
+  }
+}

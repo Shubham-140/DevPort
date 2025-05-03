@@ -1,0 +1,175 @@
+/* About.css */
+
+/* Base Styles */
+.about-container {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.about-hero {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -0.05em;
+}
+
+.about-hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Bio Section */
+.about-bio {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-bio h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about-bio h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  border-radius: 2px;
+}
+
+.about-bio p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Skills Section */
+.about-skills {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.about-skills h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.about-skills h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #6e8efb, #a777e3);
+  border-radius: 2px;
+}
+
+.about-skills ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-skills li {
+  background: #f8f9fa;
+  padding: 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #444;
+  border-left: 4px solid #6e8efb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-skills li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 3rem 1rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero p {
+    font-size: 1.2rem;
+  }
+
+  .about-bio,
+  .about-skills {
+    padding: 2rem;
+  }
+
+  .about-bio h2,
+  .about-skills h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-skills ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .about-bio,
+  .about-skills {
+    padding: 1.5rem;
+  }
+
+  .about-bio h2,
+  .about-skills h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-skills li {
+    padding: 1rem;
+  }
+}

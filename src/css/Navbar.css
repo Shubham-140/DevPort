@@ -1,0 +1,225 @@
+/* Navbar.css - Premium Design */
+
+/* Base Styles */
+.navbar {
+  background-color: #1a1a2e;
+  padding: 0.8rem 3rem; /* Reduced height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1000;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  min-height: 40px; /* Ensures consistent reduced height */
+}
+
+/* Logo and Title */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  z-index: 1002; /* Above mobile menu */
+}
+
+.navbar-brand:hover {
+  transform: translateX(-3px);
+}
+
+.navbar-logo {
+  width: 32px; /* Slightly smaller */
+  height: 32px; /* Slightly smaller */
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 1.3rem; /* Slightly smaller */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+  background: linear-gradient(to right, #6e8efb, #a777e3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Links */
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem; /* Slightly smaller */
+  font-weight: 500;
+  padding: 0.4rem 0.8rem; /* Reduced padding */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navbar-link:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, #6e8efb, #a777e3);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::before {
+  width: 70%;
+}
+
+.navbar-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.3);
+}
+
+.navbar-link.active {
+  color: white;
+  font-weight: 600;
+}
+
+.navbar-link.active::before {
+  width: 70%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Close Button (X) */
+.close-btn {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  z-index: 1003;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.close-btn span:first-child {
+  transform: rotate(45deg);
+}
+
+.close-btn span:last-child {
+  transform: rotate(-45deg);
+}
+
+/* Mobile Responsiveness - Updated design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 2rem; /* Consistent reduced height */
+  }
+
+  .navbar-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(26, 26, 46, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    padding: 0;
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar-list.active {
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .close-btn {
+    display: flex; /* Only visible when menu is active */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s;
+  }
+
+  .navbar-list.active ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-link {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    width: auto;
+    text-align: center;
+  }
+
+  .navbar-link:hover::before,
+  .navbar-link.active::before {
+    width: 50%;
+  }
+}
