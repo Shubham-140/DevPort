@@ -18,7 +18,7 @@ const About = () => {
         <p>
           I am a self-motivated individual with a strong foundation in web
           development, and I specialize in building dynamic and interactive web
-          applications. I am constantly learning and improving my skills in both
+          applications. Am constantly learning and improving my skills in both
           frontend and backend technologies. My aim is to create meaningful
           software that impacts people positively.
         </p>
@@ -29,11 +29,28 @@ const About = () => {
         <h2>Skills</h2>
         <ul>
           <li>
-            Frontend: React, HTML, CSS, JavaScript, Bootstrap, Tailwind CSS
+            <strong>Frontend Development:</strong> React, HTML5, CSS3,
+            JavaScript (ES6+), Bootstrap, Tailwind
           </li>
-          <li>Backend: Node.js, Express, MongoDB</li>
-          <li>Version Control: Git, GitHub</li>
-          <li>Other: Problem Solving, Algorithms, Data Structures</li>
+          <li>
+            <strong>Problem Solving:</strong> Algorithms, Data Structures,
+            Competitive Programming
+          </li>
+          <li>
+            <strong>Computer Science Fundamentals:</strong> DBMS, OOP, OS,
+            Computer Networks
+          </li>
+          <li>
+            <strong>System Design:</strong> SOLID Principles, Design Patterns,
+            Scalability Concepts
+          </li>
+          <li>
+            <strong>Databases:</strong> MongoDB, MySQL
+          </li>
+          <li>
+            <strong>Version Control:</strong> Git, GitHub, Collaborative
+            Development Workflows
+          </li>
         </ul>
       </section>
     </div>
