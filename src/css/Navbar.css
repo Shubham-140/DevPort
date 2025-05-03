@@ -3,15 +3,16 @@
 /* Base Styles */
 .navbar {
   background-color: #1a1a2e;
-  padding: 0.8rem 3rem; /* Reduced height */
+  padding: 0.8rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  position: relative;
+  position: sticky; /* Changed from relative to sticky */
+  top: 0; /* Required for sticky positioning */
   z-index: 1000;
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
-  min-height: 40px; /* Ensures consistent reduced height */
+  min-height: 40px;
 }
 
 /* Logo and Title */
